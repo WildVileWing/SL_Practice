@@ -1,0 +1,28 @@
+﻿@model SolarLab_Practice.Models.Person
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Add";
+}
+
+<h2>@ViewBag.Title</h2>
+<form asp-action="Add" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="name">Name</label> <br />
+        <input asp-for="name" /> <br />
+    </div>
+    <div class="form-group">
+        <label asp-for="birthDay">Birthday</label> <br />
+        <input asp-for="birthDay"> <br />
+    </div>
+    <div class="form-group">
+        <input asp-for="imageFile" accept="image/*" />
+        <span asp-validation-for="imageFile"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Send" /> <br />
+    </div>
+
+</form>
+
+
+
